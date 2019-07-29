@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+
+
+body {
+    background-color: #C8DAE6;
+}
+
+h1{
+    text-align: center;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.weather-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.weather-card {
+    margin:  20px 5px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 270px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0 0 25px 1px rgba(50, 50, 50, 0.1);
+    animation: appear 500ms ease-out forwards;
+
+p {
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    font-size:28px;
+    bottom: 0;
+    left: 35px;
+    animation: title-appear 1s ease-out 500ms forwards;
+}
+}
+
+.daytemp {
+    font-weight:600;
+    font-size:20px;
+}
+
+.nighttemp {
+    color: rgb(140, 140, 140);
+}
+
+.info {
+    text-align: center;
+}
+
+.infotablet {
+    text-align: center;
+}
+
+.inactive {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.imgsun{
+    background: url(images/sun.png) no-repeat;
+}
+
+.imgcloud{
+    background: url(images/cloud.png) no-repeat;
+}
+
+.imgrain{
+    background: url(images/rain.png) no-repeat;
+}
+
+.imgsnow{
+    background: url(images/snow.png) no-repeat;
+}
+
+.imgvariative{
+    background: url(images/variative.png) no-repeat;
+}
+
+button:hover {
+    background-color: #9c4d48;
+    transition: 0.6s;
+    /* cursor: pointer; */
+}
+
+#prev{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border:none;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border-radius: 50%;
+}
+
+#prev::before {
+    content: "«";
+    color: black;
+    font-size: 35px;
+    line-height: 20px;
+
+}
+
+#next{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border:none;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border-radius: 50%;
+}
+
+#next::after {
+    content: "»";
+    color: black;
+    font-size: 35px;
+    line-height: 20px;
+}
+
+.iconimg {
+    height: 80px;
+    width: 80px;
+    background-position: center;
+    margin: 0 auto 0;
+}
+
+@keyframes appear {
+    0% {
+        transform:scale(0);
+    }
+    50% {
+        transform:scale(1.05)
+    }
+    75% {
+        transform:scale(0.95)
+    }
+    100% {
+        transform:scale(1)
+    }
+}
+
+@keyframes title-appear {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
